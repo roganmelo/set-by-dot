@@ -31,7 +31,17 @@ test('It should set the value to a path that doesn\'t exists in the object.', ()
     .toEqual({ a: { b: 'c' }, b: [{ c: 'a' }], c: { a: 'b' } });
 });
 
-test('It should work with arrays.', () => {
-  expect(setByDot(obj, 'b.0.c', 'b')).toEqual({ a: { b: 'c' }, b: [{ c: 'b' }] });
-  expect(setByDot(obj.b, '0.c', 'c')).toEqual([{ c: 'c' }]);
+describe('It should work with arrays.', () => {
+  test('It should change an array inside an object.', () => {
+    expect(setByDot(obj, 'b.0.c', 'b')).toEqual({ a: { b: 'c' }, b: [{ c: 'b' }] });
+  });
+
+  test('It should change an array directly.', () => {
+    expect(setByDot(obj.b, '0.c', 'c')).toEqual([{ c: 'c' }]);
+  });
+
+  test('It should create an array in a property that doesn\'t exists.', () => {
+    expect(setByDot(obj, 'c.0.c', 'c'))
+      .toEqual({ a: { b: 'c' }, b: [{ c: 'a' }], c: [{ c: 'c' }] });
+  });
 });

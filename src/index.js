@@ -17,10 +17,11 @@ const setByDot = (obj, path, value) => {
     if(!Number.isNaN(parseInt(curr, 10))) {
       const keys = [...array].splice(index + 1, array.length - index);
       const arrayPath = keys.reverse().join('.');
-      const modelArray = [...getByDot(obj, arrayPath)];
-      modelArray[curr] = prev;
+      const objArray = getByDot(obj, arrayPath);
+      const newObjArray = objArray && objArray.length ? [...objArray] : [];
+      newObjArray[curr] = prev;
 
-      return modelArray;
+      return newObjArray;
     }
 
     return { [curr]: prev };
