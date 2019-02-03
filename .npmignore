@@ -1,0 +1,16 @@
+.vscode
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore
+.npmignore
+src
+test
+jsconfig.json
+LICENSE
+README.md
+yarn.lock
+.babelrc
+.gitattributes
+.travis.yml
+example

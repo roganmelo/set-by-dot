@@ -1,0 +1,68 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "plugins": ["import"],
+  "extends": ["airbnb-base/legacy"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "rules": {
+    "arrow-parens": ["error", "as-needed"],
+    "comma-dangle": ["error", "never"],
+    "global-require": "off",
+    "import/first": "off",
+    "import/no-named-as-default": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/prefer-default-export": "off",
+    "no-confusing-arrow": "off",
+    "no-console": "off",
+    "no-lonely-if": "off",
+    "no-use-before-define": "off",
+    "no-underscore-dangle": "off",
+    "object-curly-newline": "off",
+    "keyword-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": false,
+        "overrides": {
+          "import": {
+            "after": true
+          },
+          "default": {
+            "after": true
+          },
+          "from": {
+            "after": true
+          },
+          "export": {
+            "after": true
+          },
+          "const": {
+            "after": true
+          },
+          "let": {
+            "after": true
+          },
+          "else": {
+            "after": true
+          },
+          "return": {
+            "after": true
+          },
+          "try": {
+            "after": true
+          },
+          "finally": {
+            "after": true
+          }
+        }
+      }
+    ]
+  }
+}

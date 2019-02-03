@@ -1,0 +1,53 @@
+{
+  "name": "set-by-dot",
+  "version": "1.0.1",
+  "description": "🌳 Set a value to an object using dot path.",
+  "repository": "https://github.com/roganmelo/set-by-dot",
+  "homepage": "https://github.com/roganmelo/set-by-dot",
+  "license": "MIT",
+  "author": {
+    "name": "Rogan Melo",
+    "email": "roganmelo@gmail.com",
+    "url": "https://github.com/roganmelo"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "compile": "yarn clean && cp -r src/ dist/ && babel src --out-dir dist",
+    "prepublish": "yarn compile && yarn test",
+    "eslint": "eslint src/. --config .eslintrc",
+    "jest": "jest",
+    "test": "yarn eslint && NODE_ENV=development yarn jest"
+  },
+  "keywords": [
+    "set",
+    "dot",
+    "value",
+    "utilities",
+    "property",
+    "pick",
+    "path",
+    "object"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.0.0"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.js"
+    ]
+  },
+  "dependencies": {
+    "get-by-dot": "^1.0.1"
+  }
+}
