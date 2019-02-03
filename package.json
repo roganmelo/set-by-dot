@@ -1,6 +1,6 @@
 {
   "name": "set-by-dot",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "🌳 Set a value to an object using dot path.",
   "repository": "https://github.com/roganmelo/set-by-dot",
   "homepage": "https://github.com/roganmelo/set-by-dot",

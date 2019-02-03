@@ -1,4 +1,4 @@
-# Get by dot
+# Set by dot
 
 🌳 Set a value to an object using dot path.
 
@@ -12,7 +12,7 @@
 ### API
 `import setByDot from 'set-by-dot';`
 
-`setByDot({}, 'path');`
+`setByDot({}, 'path', 'value');`
 
 
 ### Usage
@@ -25,8 +25,8 @@
     b: [{ c: 'a' }]
   };
 
-  setByDot(obj, 'a.b'); // c
-  setByDot(obj, 'a'); // { b: 'c' }
-  setByDot(obj, 'a.b.c'); // undefined
-  setByDot(obj); // { a: { b: 'c' }, b: [{ c: 'a' }] };
+  setByDot(obj, 'a.b', 'a') // { a: { b: 'a' }, b: [{ c: 'a' }] }
+  setByDot(obj, 'a', 'c');  // { a: 'c', b: [{ c: 'a' }] }
+  setByDot(obj, 'a.b.c', 'b');  // { a: { b: 'a', c: 'b' }, b: [{ c: 'a' }] }
+  setByDot(obj);  // { a: { b: 'a' }, b: [{ c: 'a' }] }
 ```
