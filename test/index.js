@@ -15,34 +15,23 @@ test('It should return an error asking for a valid first parameter.', () => {
 });
 
 test('It should return the given object if the path isn\'t passed.', () => {
-  const newObj = { ...obj };
-
-  expect(setByDot(newObj)).toEqual(obj);
+  expect(setByDot(obj)).toEqual(obj);
 });
 
 test('It should return the given value if the path is undefined.', () => {
-  const newObj = { ...obj };
-
-  expect(setByDot(newObj, undefined, 'a')).toBe('a');
+  expect(setByDot(obj, undefined, 'a')).toBe('a');
 });
 
 test('It should set the value to a path for a given object.', () => {
-  const newObj = { ...obj };
-
-  expect(setByDot(newObj, 'a.b', 'a')).toEqual({ a: { b: 'a' }, b: [{ c: 'a' }] });
+  expect(setByDot(obj, 'a.b', 'a')).toEqual({ a: { b: 'a' }, b: [{ c: 'a' }] });
 });
 
 test('It should set the value to a path that doesn\'t exists in the object.', () => {
-  const newObj = { ...obj };
-
-  expect(setByDot(newObj, 'c.a', 'b'))
+  expect(setByDot(obj, 'c.a', 'b'))
     .toEqual({ a: { b: 'c' }, b: [{ c: 'a' }], c: { a: 'b' } });
 });
 
 test('It should work with arrays.', () => {
-  const newObj = { ...obj };
-  const newObj1 = { ...obj };
-
-  expect(setByDot(newObj, 'b.0.c', 'b')).toEqual({ a: { b: 'c' }, b: [{ c: 'b' }] });
-  expect(setByDot(newObj1.b, '0.c', 'c')).toEqual([{ c: 'c' }]);
+  expect(setByDot(obj, 'b.0.c', 'b')).toEqual({ a: { b: 'c' }, b: [{ c: 'b' }] });
+  expect(setByDot(obj.b, '0.c', 'c')).toEqual([{ c: 'c' }]);
 });
