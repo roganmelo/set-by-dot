@@ -1,4 +1,4 @@
-# Set by dot
+# set-by-dot
 
 🌳 Set a value to an object using dot path.
 
