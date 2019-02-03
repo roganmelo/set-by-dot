@@ -26,9 +26,6 @@ const setByDot = (obj, path, value) => {
     return { [curr]: prev };
   }, value);
 
-  console.log(obj);
-  console.log(result);
-  console.log(Object.assign({}, obj, result));
   return Array.isArray(result) ? result : { ...obj, ...result };
 };
 
