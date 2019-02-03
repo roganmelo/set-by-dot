@@ -2,9 +2,10 @@
   "env": {
     "es6": true,
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "jest/globals": true
   },
-  "plugins": ["import"],
+  "plugins": ["import", "jest"],
   "extends": ["airbnb-base/legacy"],
   "parser": "babel-eslint",
   "parserOptions": {
