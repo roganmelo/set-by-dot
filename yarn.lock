@@ -1887,10 +1887,10 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
-get-by-dot@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/get-by-dot/-/get-by-dot-1.0.1.tgz#18b0d609461448d5195eed0d4fb3d6a702197572"
-  integrity sha512-i/5rJLYxwHt7rS6vCoBop8ziYEGGcApmnH9zgcOPORw5aUr7Q4XU5IF2mYazkPFijQ/jgso2CaFSNKZasA/V2Q==
+get-by-dot@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/get-by-dot/-/get-by-dot-1.0.2.tgz#8ba0ef82fe3435ce57faa133e45357a9059a7081"
+  integrity sha512-gzOcBY84Hd7vTE5r5pXHSyPGuFAxABCfYV3Oey8Z6RxikkhJbbL9x3vu0cOn53QjZfQI1X5JZuNCVwOlvqLBwQ==
 
 get-caller-file@^1.0.1:
   version "1.0.3"
