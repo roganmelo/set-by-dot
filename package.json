@@ -15,7 +15,7 @@
     "clean": "rm -rf ./dist",
     "compile": "yarn clean && cp -r src/ dist/ && babel src --out-dir dist",
     "prepublish": "yarn compile && yarn test",
-    "eslint": "eslint src/. --config .eslintrc",
+    "eslint": "eslint src/. tests/. --config .eslintrc",
     "jest": "jest",
     "test": "yarn eslint && NODE_ENV=development yarn jest"
   },
