@@ -18,7 +18,9 @@ const setByDot = (obj, path, value) => {
       const keys = [...array].splice(index + 1, array.length - index);
       const arrayPath = keys.reverse().join('.');
       const objArray = getByDot(obj, arrayPath);
-      const newObjArray = objArray && objArray.length ? [...objArray] : [];
+      const newObjArray = objArray && objArray !== 'undefined' && objArray.length
+        ? [...objArray]
+        : [];
       newObjArray[curr] = prev;
 
       return newObjArray;
